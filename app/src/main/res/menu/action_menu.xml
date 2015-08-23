@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+    <item android:id="@+id/menu_map"
+        android:icon="@mipmap/ic_map"
+        android:title="@string/map"
+        app:showAsAction="always"/>
+    <item android:id="@+id/menu_list"
+        android:icon="@mipmap/ic_list"
+        android:title="@string/list"
+        app:showAsAction="always"/>
+    <item android:id="@+id/menu_current"
+        android:icon="@mipmap/ic_current"
+        android:title="@string/current"
+        app:showAsAction="always"/>
+</menu>
