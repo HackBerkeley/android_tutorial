@@ -114,4 +114,12 @@ Similarly, when we restart this activity, we want to resume the repeated bus loc
 setUpMapIfNeeded();
 ```
 
-Step 6: 
+Step 6: What to do from here:
+==============================
+Congratulations! You have now mastered a basic understanding of all things Android! So what can you do from here? 
+
+Well, one thing you can do is learn about saving data. There are two primary ways to do this. The first way is through something called SharedPreferences, which allows you to save key-value pairs. You can find a link to this [here](http://www.tutorialspoint.com/android/android_shared_preferences.htm). Another way to do this is using SQLite, which you can learn about [here](http://www.tutorialspoint.com/android/android_sqlite_database.htm). Lastly, you can use third party libraries to abstract away the whole databasing process away from you. The most popular such service is [Parse](https://parse.com/docs/android/guide).
+
+Another thing that you should definitely learn how to do is actually upload an Android Application. To do this you will have to pay the one-time $25 fee to become an official developer (which, in my opinion, is totally worth it). Next, follow [this guide](https://support.google.com/googleplay/android-developer/answer/113469?hl=en) to actually go about uploading your application. 
+
+Thank you so much for attending the workshop!
