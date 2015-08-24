@@ -39,10 +39,9 @@ public class LocationDetailsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         ActionBar actionBar = getActionBar();
         setContentView(R.layout.activity_location_details);
-        Intent intent = getIntent();
-        url = intent.getExtras().getString("url");
-        location = intent.getExtras().getString("name");
-        setTitle(location);
+        /*
+        INSERT CODE HERE
+         */
 
         setUpMapIfNeeded();
     }
@@ -136,8 +135,9 @@ public class LocationDetailsActivity extends AppCompatActivity {
     private class GetLocationTask extends AsyncTask {
         protected Object doInBackground(Object[] urls) {
             try{
-//                JSONObject page = new Communicator().getJsonFromUrl((String) urls[0]);
-                JSONObject page = new Communicator().getJsonFromUrl((String) urls[0]);
+                //MODIFY THIS LINE!!!
+                JSONObject page = null;
+                //MODIFY THE ABOVE LINE!!!
                 return page;
             }catch(Exception e){
                 return null;

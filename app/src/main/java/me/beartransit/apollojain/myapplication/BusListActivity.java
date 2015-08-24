@@ -35,7 +35,7 @@ public class BusListActivity extends AppCompatActivity {
     private TextView title;
     private TextView description;
     private String[] s;
-    BusListActivity b = this;
+    BusListActivity thisActivity = this;
 
 
     @Override
@@ -116,7 +116,7 @@ public class BusListActivity extends AppCompatActivity {
                     location_dist[i] = 0;
                 }
                                             }
-            BusListAdapter adapter = new BusListAdapter(b, R.layout.bus_list, location_ids, location_names,  location_dist);
+            BusListAdapter adapter = new BusListAdapter(thisActivity, R.layout.bus_list, location_ids, location_names,  location_dist);
             final ListView listView = (ListView) findViewById(R.id.all_stops_list);
             listView.setAdapter(adapter);
             listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -126,10 +126,9 @@ public class BusListActivity extends AppCompatActivity {
                     String name = (String) hm.get(location);
                     String ms = Long.toString(System.currentTimeMillis());
                     String url = (new Communicator()).convert_id_to_url(location);
-                    Intent intent = new Intent(b, LocationDetailsActivity.class);
-                    intent.putExtra("url", url);
-                    intent.putExtra("name", name);
-                    b.startActivity(intent);
+                    /*
+                    INSERT CODE HERE!!!!!
+                     */
 
                 }
             });

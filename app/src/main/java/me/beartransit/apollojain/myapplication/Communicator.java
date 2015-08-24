@@ -44,12 +44,7 @@ public class Communicator {
         {
             HttpClient client = new DefaultHttpClient();
             client.getParams().setParameter(CoreProtocolPNames.USER_AGENT, "android");
-            HttpGet request = new HttpGet();
-            request.setHeader("Content-Type", "text/plain; charset=utf-8");
-            request.setURI(new URI(URL));
-            HttpResponse response = client.execute(request);
-            in = new BufferedReader(new InputStreamReader(response.getEntity().getContent()));
-
+            //Insert code here
             StringBuffer sb = new StringBuffer("");
             String line = "";
 

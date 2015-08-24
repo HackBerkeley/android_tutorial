@@ -70,11 +70,12 @@ public class CurrentMapsActivity extends AppCompatActivity {
         super.onPause();
         stopRepeatingTask();
 
+
     }
 
     public void onStop(){
         super.onStop();
-        stopRepeatingTask();
+        //INSERT CODE HERE
     }
 
     public void onDestroy() {
@@ -96,7 +97,7 @@ public class CurrentMapsActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        setUpMapIfNeeded();
+        //INSERT CODE HERE
     }
 
     @Override
