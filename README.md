@@ -39,7 +39,7 @@ This step is designed to give you a little bit of experience with XML and Androi
             android:text="TextView"
             android:layout_marginLeft="10dp"/>
     </LinearLayout>
-'''
+```
 
 Here's a little explanation of what you just did. First, you created a **Linear Layout**, which essentially means that every element you add is stacked vertically. You then added two **TextViews** with padding and margins that make it so the TextViews don't directly mash into each other or the wall. The entire thing is called a **ListView**, which basically allows you to take an array and turn it into a list of things using a **ListViewAdapter**. You can see what I mean by this in values/activity_bus_list.xml and java/me.beartransit.apollojain.myapplication/BusListAdapter respectively. 
 
@@ -48,12 +48,14 @@ Step 3: Intents
 In Android, we have what are called **Intents**, which is essentially a short description of an action that is about to be done. They can be used to trigger an **Activity**, which is essentially what allows an app to do different things (for instance, in Bear Transit, the real-time tracking and the location listings are in different activities). They can also be used to pass information between said Activities. Let's take a look. 
 
 Let's first go to BusListActivity, which lists all of the Bear Transit Stops on campus. If  you scroll to the bottom, in the onPostExecute function of GetJsonTask, you can see a comment that says "PLACE CODE HERE." In that line, type the following code: 
+
 ```
 Intent intent = new Intent(thisActivity , LocationDetailsActivity.class);
 intent.putExtra("url", url);
 intent.putExtra("name", name);
 thisActivity.startActivity(intent);
 ```
+
 What did we just do? First of all, we created our Intent, which will take us from this BusListActivity class to a new activity called LocationDetailsActivity. Next, we want to send two strings, one of which is the url associated with the location we're looking at and the other of which is the actual name of the location we're looking at. Next, we will have thisActivity (which is our current BusListActivity) actually start the intent and go to LocationDetailsActivity. 
 
 Now, let's go to LocationDetailsActivity. In the method onCreate, you will see the same line "INSERT CODE HERE." Type the following lines: 
@@ -64,6 +66,7 @@ url = intent.getExtras().getString("url");
 location = intent.getExtras().getString("name");
 setTitle(location);
 ```
+
 What this does is gets the intent that was sent to this particular activity. You then retrieve the values associated with the keys "url" and "name," and set the Title (which is at the top of the app) to the location.
 
 Step 4: Making requests
